@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR Services</title>
+    <!-- Preload important script -->
+    <link rel="preload" href="important-script.js" as="script">
+    <link rel="prefetch" href="next-page.html">
+
+    <link rel="stylesheet" href="style.css"> <!-- connect to the styling css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- fav-icon for the browser -->
+</head>
+
+<body>
+    <div class="headerS">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="150px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <!--add clickable menu using tag <a></a> to link pages-->
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!--<li><a href="blog.html">Blog</a></li>-->
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <!--<a href="cart.html"><img src="images/shopping-bag1.png" width="30px" height="30px" alt="Cart"></a>-->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            <!--SEARCHING-->
+            <div class="search-container">
+                <span class="search-icon">&#x1F50D;</span> <!--Search icon -->
+                <select id="search-dropdown" class="search-dropdown">
+                    <option value="">Select an option</option>
+                    <option value="products">Products</option>
+                    <option value="aboutus">AboutUs</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/CsrPic2.jpg" class="circular-img1">
+                </div>
+                <div class="col-2">
+                    <h1>Giving Back with Every Step!</h1>
+                    <p>
+                        At Susan Waviatu Shoe Collection, we believe in the power of giving back. That’s why
+                        we have made it our mission to provide shoes to those in need, especially children in
+                        orphanages and underserved communities. <br /><br />Through our shoe trade-in program, 
+                        you can donate your gently worn shoes, and in return, receive fair-priced footwear from our 
+                        collection. Your contribution helps bring comfort, dignity, and joy to those who need it most.
+                        <br /><br />Step forward with us—because every pair makes a difference!
+                    </p>
+                    <a href="contact.html" class="btn">Reach Out &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Giving Back Section -->
+    <div class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Commitment to Giving Back</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="images/CsrPic2.jpg" alt="Shoe Donations">
+                    <h3>Shoe Donations</h3>
+                    <p>We collect gently worn shoes and donate them to orphans and those in need, helping provide comfort and dignity to underprivileged communities.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/CsrPic1.jpg" alt="Shoe Trade-In Program">
+                    <h3>Shoe Trade-In Program</h3>
+                    <p>Trade in your old shoes for a fair discount on a new pair! Your contribution supports those less fortunate while you refresh your collection affordably.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/CsrPic7.jpeg" alt="Community Outreach">
+                    <h3>Community Outreach</h3>
+                    <p>Our mission extends beyond shoes—we actively engage in charity events and outreach programs to uplift and empower vulnerable communities.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/CsrPic5.jpg" alt="Supporting Children's Homes">
+                    <h3>Supporting Children's Homes</h3>
+                    <p>We partner with children's homes to provide footwear to orphans, ensuring they have comfortable, durable shoes for school and everyday life.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/CsrPic5.jpg" alt="Sustainable Fashion">
+                    <h3>Sustainable Fashion</h3>
+                    <p>By encouraging shoe recycling and trade-ins, we promote sustainability, reducing waste while ensuring quality footwear reaches those who need it most.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/CsrPic3.jpg" alt="Join Us in Giving Back">
+                    <h3>Join Us in Giving Back</h3>
+                    <p>Want to make a difference? Donate shoes, participate in our outreach programs, or volunteer with us to spread kindness—one step at a time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------Testimonials------->
+    <div class="testmonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                        I can't say enough about the amazing experience I had at Susan Waviatu Shoe Collection. I traded in my 
+                        old shoes and got a stylish new pair at a great price! <br />The quality, comfort, and customer 
+                        service were exceptional. Plus, knowing my old shoes went to someone in need made the experience even 
+                        more special!
+                    </p>
+                    <i class="fa fa-quote-left"></i>
+                    <div class=" rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <!---<img src="images/client4.png">-->
+                    <h3>Mama Omondi</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                        Susan Waviatu Shoe Collection exceeded my expectations! I found the perfect pair of heeled shoes 
+                        that are both stylish and comfortable. <br /><br />The boot collection was also impressive—durable, 
+                        trendy, and perfect for any occasion. I’ll definitely be coming back for more!
+                    </p>
+                    <i class="fa fa-quote-left"></i>
+                    <div class=" rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <!--<img src="images/client1.webp">-->
+                    <h3>Ruth Kambua</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                        I recently visited Susan Waviatu Shoe Collection and was amazed by the variety of shoes they offer. Whether you're 
+                        looking for elegant heels, stylish boots, or comfortable kids' shoes, they have it all. <br />I was especially impressed 
+                        with their trade-in program, allowing me to exchange my old shoes for a new pair at a great price—fashion with a purpose!
+                    </p>
+                    <i class="fa fa-quote-left"></i>
+                    <div class=" rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <!--<img src="images/client6.jpeg">-->
+                    <h3>Baba Tony</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="images/logo3.png" alt="Footer Logo">
+                    <p>Trust us for quality, reliability, and top brands
+                        like Nike, Brogues, Clowse, Taiyu, name them...<br /><br />Take advantage of our
+                        shoes trade-in program to upgrade your shoe-game effortlessly and affordably—Susam Muli Mwende, Founder</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="">mwendesusa@gmail.com</a></li>
+                        <li><a href="">+254724-541-470</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Download Our App</h3>
+                    <p>Android & iOS users</p>
+                    <div class="app-logo">
+                        <li><a href="https://play.google.com/store/apps?hl=en_US&pli=1"><img src="images/playstore.png"
+                                    alt="Play Store"></a>
+                        <li><a href="https://appstore.com"><img src="images/appstore.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2024 JMS | Susan Waviatu Collection. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!--js searching-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchIcon = document.querySelector(".search-icon");
+            const searchContainer = document.querySelector(".search-container");
+            const searchDropdown = document.getElementById("search-dropdown");
+
+            // Toggle dropdown visibility when search icon is clicked
+            searchIcon.addEventListener("click", function () {
+                searchContainer.classList.toggle("active");
+            });
+
+            // Handle navigation when a dropdown option is selected
+            searchDropdown.addEventListener("change", function () {
+                const selectedValue = this.value;
+
+                if (selectedValue === "products") {
+                    // Redirect to services.html when "Services" is selected
+                    window.location.href = "products.html";
+                } else if (selectedValue === "aboutus") {
+                    // Redirect to services.html when "Services" is selected
+                    window.location.href = "about.html";
+                } else if (selectedValue) {
+                    const section = document.getElementById(selectedValue + "section");
+                    if (section) {
+                        // Fast and seamless scrolling
+                        window.scrollTo({
+                            top: section.offsetTop,
+                            behavior: 'auto' // Instant scroll without delay
+                        });
+                    }
+                }
+            });
+
+            // Close the dropdown if clicked outside
+            document.addEventListener("click", function (event) {
+                if (!searchContainer.contains(event.target)) {
+                    searchContainer.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+    <!--------menu toggle-->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "1000px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!--code copy protection <right click and other chortcuts dissabled-->
+    <script>
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'i' || e.key === 'c')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!-- Product Details Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <!-- Preload important script -->
+    <link rel="preload" href="important-script.js" as="script">
+    <link rel="prefetch" href="next-page.html">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+
+<body>
+    <!-- Header and Navigation as before -->
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="150px" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <!--add clickable menu using tag <a></a> to link pages-->
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!--<li><a href="blog.html">Blog</a></li>-->
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <!--<a href="cart.html"><img src="images/shopping-bag1.png" width="30px" height="30px" alt="Cart"></a>-->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+    </div>
+
+    <div class="container product-details">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/patek1.jpg" width="100%" id="productImg" class="circular-img2">
+                <div class="small-img-row">
+                    <!-- Small images -->
+                    <div class="small-img-column">
+                        <img src="images/default.jpg" width="100%" class="small-img" class="circular-img">
+                    </div>
+                    <div class="small-img-column">
+                        <img src="images/default.jpg" width="100%" class="small-img" class="circular-img">
+                    </div>
+                    <div class="small-img-column">
+                        <img src="images/default.jpg" width="100%" class="small-img" class="circular-img">
+                    </div>
+                    <div class="small-img-column">
+                        <img src="images/default.jpg" width="100%" class="small-img" class="circular-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p id="productBrand">Brand</p>
+                <h1 id="productName">Product Name</h1>
+                <h4 id="productPrice">$ 0.00</h4>
+
+                <select id="productColor">
+                    <option>Select color</option>
+                    <!-- Color options -->
+                    <option>Select color</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Gray</option>
+                    <option>Brown</option>
+                    <option>Maroon</option>
+                    <option>Other</option>
+                </select>
+                <input type="number" id="productQuantity" value="1" class="input-style" min="1">
+                <a href="#" id="addToCart" class="btn" onclick="addToCart()">ADD TO CART</a>
+                <h3>Details <i class="fa-solid fa-indent"></i></h3>
+                <p>Product description...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="images/logo3.png" alt="Footer Logo">
+                    <p>Trust us for quality, reliability, and top brands
+                        like iPhone, Samsung,
+                        Huawei, OnePlus, Oppo, Redmi, Infinix, and Tecno.<br /><br />Take advantage of our
+                        mobile trade-in program to upgrade your device effortlessly and affordably—Fredy, Director and
+                        Founder</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <!--<li><a href="services.html">Services</a></li>-->
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <!--<li><a href="blog.html">Blog</a></li>-->
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="">fredrickombese5@gmail.com</a></li>
+                        <li><a href="">+254721-550-206</a></li>
+                        <li><a href="https://youtube.com">YouTube</a></li>
+                        <li><a href="https://facebook.com">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Download Our App</h3>
+                    <p>Android & iOS users</p>
+                    <div class="app-logo">
+                        <li><a href="https://play.google.com/store/apps?hl=en_US&pli=1"><img src="images/playstore.png"
+                                    alt="Play Store"></a>
+                        <li><a href="https://appstore.com"><img src="images/appstore.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2024 JMS | Fredrick Ombese-BK Digital. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButton = document.getElementById('addToCart');
+
+            // Ensure the event listener is added only once
+            if (addToCartButton) {
+                addToCartButton.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default action
+
+                    // Check if the button is already in the process of being clicked
+                    if (addToCartButton.hasAttribute('data-clicked')) {
+                        return; // Exit if already clicked
+                    }
+
+                    // Mark the button as clicked
+                    addToCartButton.setAttribute('data-clicked', 'true');
+
+                    addToCart(); // Add the item to the cart
+
+                    // Redirect to the contactus page
+                    window.location.href = 'contact.html';
+
+                    // Optional: Reset the clicked state after a delay
+                    setTimeout(() => {
+                        addToCartButton.removeAttribute('data-clicked');
+                    }, 1000); // Reset after 1 second
+                });
+            }
+
+            // Function to get query parameters from the URL
+            function getQueryParams() {
+                const params = new URLSearchParams(window.location.search);
+                const result = {};
+                for (const [key, value] of params.entries()) {
+                    result[key] = decodeURIComponent(value);
+                }
+                return result;
+            }
+
+            // Function to update product details on the page
+            function updateProductDetails() {
+                const params = getQueryParams();
+                document.getElementById('productName').textContent = params.name || 'Product Name';
+                document.getElementById('productPrice').textContent = '$' + (params.price || '0.00');
+                document.getElementById('productImg').src = params.image || 'images/default.jpg';
+            }
+
+            // Function to add the item to the cart
+            function addToCart() {
+                const name = document.getElementById('productName').textContent;
+                const priceText = document.getElementById('productPrice').textContent;
+                const price = parseFloat(priceText.replace('$', '').trim());
+                const quantity = parseInt(document.getElementById('productQuantity').value, 10);
+                const color = document.getElementById('productColor') ? document.getElementById('productColor').value : 'N/A';
+
+                const cartItem = {
+                    name: name,
+                    price: price,
+                    quantity: quantity,
+                    color: color
+                };
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(cartItem);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                //alert('Item added to cart');
+                alert('Fill details and submit');
+            }
+
+
+            // Update product details on page load
+            updateProductDetails();
+
+            // Update product details on page load
+            updateProductDetails();
+        });
+    </script>
+
+    <!------js to toggle images of attached to the bigger image for better view before adding to cart ------>
+    <script>
+        var productImg = document.getElementById("productImg");
+        var smallImg = document.getElementsByClassName("small-img");
+
+        smallImg[0].onclick = function () {
+            productImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function () {
+            productImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function () {
+            productImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function () {
+            productImg.src = smallImg[3].src;
+        }
+    </script>
+    <!--------menu toggle-->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "1000px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!--code copy protection <right click and other chortcuts dissabled-->
+    <script>
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'i' || e.key === 'c')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+    <!-- Preload important script -->
+    <link rel="preload" href="important-script.js" as="script">
+    <link rel="prefetch" href="next-page.html">
+
+    <link rel="stylesheet" href="style.css"> <!-- connect to the styling css-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png"><!----fav-icon for the browser---->
+
+    <!--handle message submition-->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="150px" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <!--<a href="cart.html"><img src="images/shopping-bag1.png" width="30px" height="30px" alt="Cart"></a>-->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
+        </div>
+
+    </div>
+
+    <!-- Contact Us -->
+    <div class="contactUs">
+        <div class="container">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Contact Form</h6>
+                            <form id="contactForm">
+                                <div class="form-groupContact">
+                                    <label class="mb-1" for="fullName">Full Name:</label>
+                                    <input type="text" id="fullName" name="fullName" class="form-control"
+                                        placeholder="Enter full name" required>
+                                </div>
+                                <div class="form-groupContact">
+                                    <label class="mb-1" for="phoneNumber">Phone Number:</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"
+                                        placeholder="Enter phone number" required>
+                                </div>
+                                <div class="form-groupContact">
+                                    <label class="mb-1" for="emailAddress">Email Address:</label>
+                                    <input type="email" id="emailAddress" name="emailAddress" class="form-control"
+                                        placeholder="Enter your email address">
+                                </div>
+                                <div class="form-groupContact">
+                                    <label class="mb-1" for="notes">Notes:</label>
+                                    <textarea id="notes" name="notes" rows="3" class="form-control"
+                                        placeholder="Type your notes here"></textarea>
+                                </div>
+                                <div class="form-groupContact py-3">
+                                    <button type="submit" class="btn btn-primary shadow">Send Message</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-md-6 border-start">
+                            <h5 class="main-heading">Address Information</h5>
+                            <div class="underline"></div>
+                            <p>| Ruben Center | Mukuru Slums</p>
+                            <p>| Online Store - Deliveries, Nairobi</p>
+                            <p class="mobileNo">+254724541479 (Susan)</p>
+                            <p>mwendesusa@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="images/logo3.png" alt="Footer Logo">
+                    <p>Trust us for quality, reliability, and top brands
+                        like Nike, Brogues, Clowse, Taiyu, name them...<br /><br />Take advantage of our
+                        shoes trade-in program to upgrade your shoe-game effortlessly and affordably—Susam Muli Mwende, Founder</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="">mwendesusa@gmail.com</a></li>
+                        <li><a href="">+254724-541-470</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Download Our App</h3>
+                    <p>Android & iOS users</p>
+                    <div class="app-logo">
+                        <li><a href="https://play.google.com/store/apps?hl=en_US&pli=1"><img src="images/playstore.png"
+                                    alt="Play Store"></a>
+                        <li><a href="https://appstore.com"><img src="images/appstore.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2024 JMS | Susan Waviatu Collection. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize EmailJS
+        emailjs.init("TCwStDhV9Cen7dNDJ"); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Check if all required fields are filled
+            var form = event.target;
+            if (!form.checkValidity()) {
+                // If not all required fields are filled, show an alert or handle accordingly
+                alert("Please fill out all required fields.");
+                return;
+            }
+
+            // Send email
+            emailjs.sendForm("service_i7je3xu", "template_n7yxqjb", form)
+                .then(function (response) {
+                    alert("Message sent successfully! Someone will call you shortly!");
+                    form.reset(); // Optionally reset the form after successful submission
+                }, function (error) {
+                    alert("Please call us if not sending!!!.");
+                });
+        });
+    </script>
+
+    <!--------js for menu toggle-->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "1000px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+<!--code copy protection <right click and other chortcuts dissabled-->
+<script>
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && (e.key === 'u' || e.key === 'i' || e.key === 'c')) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+</html>

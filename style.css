@@ -1,0 +1,2394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+    /* Matches the height of your navbar */
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    top: 0;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    z-index: 1000;
+    /* Ensure it appears above other elements */
+    box-shadow: 0px 4px 2px -2px gray;
+    /* Optional: adds a subtle shadow */
+}
+
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin-right: 15px;
+    transition: color 0s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #f0f0f0;
+    /* Color when hovering over a link */
+    background-color: #555;
+    /* Background color when hovering */
+    border-radius: 5px;
+    /* Optional: add rounded corners */
+}
+
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: #555;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 45%;
+    min-width: 300px;
+}
+
+.circular-img {
+    width: 75%;
+    height: auto;
+    /* Ensures the height adjusts based on the width to maintain aspect ratio */
+    border-radius: 5%;
+    /* Makes the image fully circular */
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+    /* Ensures the image covers the container while maintaining aspect ratio */
+    object-position: center;
+    /* Centers the image within the container */
+    margin: 0 auto;
+    /* Centers the image horizontally in its container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds a subtle shadow for a more polished look */
+}
+
+.circular-img1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 60px;
+}
+
+.circular-imgHM {
+    width: 100%;
+    height: 400px;
+    border-radius: 10%;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.circular-img2 {
+    width: 100%;
+    height: auto;
+    border-radius: 15%;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+}
+
+.circular-img3 {
+    width: 100%;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+}
+
+/*---Offer Pic---*/
+.circular-img4 {
+    width: 100%;
+    height: 400px;
+    border-radius: 15%;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+}
+
+
+.col-2 h1 {
+    font-size: 30px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #09a724;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+
+.btn:hover {
+    background: #2b091b;
+    /*change color on pointing*/
+}
+
+.header {
+    background: #fff;
+}
+
+
+.header .row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.headerS .row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/*----categories----*/
+
+.categories {
+    margin: 70px 0;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4 {
+    flex-basis: 20%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+    flex-direction: column;
+    text-align: center;
+}
+
+.col-4 img {
+    width: 100%;
+    height: autopx;
+}
+
+
+.title {
+    text-align: center;
+    margin: 0 auto 50px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after {
+    content: '';
+    background: green;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+    color: #555;
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 15px;
+}
+
+.rating .fa-solid,
+.rating .fa-regular,
+.rating .fa-star-half-alt {
+    color: green !important;
+}
+
+.col-4:hover {
+    transform: translateY(-5px);
+}
+
+.description {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.offer {
+    background: #e2edf7;
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.offer .col-2 {
+    text-align: center;
+    align-items: center;
+}
+
+small {
+    color: #555;
+}
+
+.align-top {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.testmonial {
+    padding: 100px;
+}
+
+.testmonial .col-3 {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(31, 112, 72, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testmonial .col-3 img {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 140px;
+}
+
+.testmonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left {
+    font-size: 10px;
+    color: green;
+}
+
+.col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.testmonial .col-3 h3 {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+
+}
+
+/* ------------------Container for the brand logos----------------- */
+.brands {
+    display: flex;
+    /* Use flexbox to center the container */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 60%;
+    height: 150px;
+    margin: 40px auto 10px;
+    background: fixed;
+}
+
+/* Scrolling wrapper to hold the items and handle overflow */
+.scrolling-wrapper {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+    /* Prevent wrapping of items */
+}
+
+/* Container for the brand items */
+.brand-items {
+    display: flex;
+}
+
+/* Style for each brand image */
+.brand-items img {
+    width: 40%;
+    height: 10%;
+    margin-right: 75px;
+}
+
+/* Animation keyframes for continuous motion */
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+        /* Start position off-screen to the right */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* End position off-screen to the left */
+    }
+}
+
+/* ------------------footer----------------- */
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    font-size: 15px;
+    padding: 60px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    color: #8a8a8a;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.footer h3 {
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-col-1 {
+    flex: 1;
+}
+
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1;
+}
+
+.footer-col-1 img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-col-4 li {
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+.app-logo {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.app-logo img {
+    width: 120px;
+    margin: 0 10px;
+}
+
+.app-logo img:hover {
+    color: #ffbd2e;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 2px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*---------menu icon-----*/
+.menu-icon {
+    width: 30px;
+    margin-left: 20px;
+    display: none;
+}
+
+/*----- All products -----*/
+.row-2 {
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select {
+    border: 1px solid green;
+    padding: 5px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.page-btn {
+    margin: 0 auto 60px;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid green;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover {
+    background: green;
+    color: #fff;
+}
+
+/*----PRODUCT DETAILS STYLING------*/
+
+.headProd h1 {
+    color: #1765be;
+    text-align: center;
+    margin: 50px 0;
+    font-size: 30px;
+}
+
+.product-details {
+    margin-top: 50px;
+}
+
+.products-section h2 {
+    color: #1765be;
+}
+
+.sectionProd-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px 0 20px 0;
+}
+
+.product-details .col-2 {
+    padding: 20px;
+}
+
+.product-details .col-2 img {
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.product-details h4 {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-details select {
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.product-details input {
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid green;
+}
+
+input:focus {
+    outline: none;
+}
+
+.product-details .fa-indent {
+    color: green;
+    margin-left: 10px;
+}
+
+.small-img-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-column {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.small-img-column img {
+    height: 50%;
+}
+
+/*------------cart details--------*/
+.cart-page {
+    margin: 80px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: green;
+    font-weight: normal;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-info img {
+    width: 80px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a {
+    color: green;
+}
+
+.total-cost {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.total-cost table {
+    border-top: 5px solid green;
+    width: 100%;
+    max-width: 680px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+
+/*-----account page-----*/
+
+.account-page .col-2 {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.form-container {
+    background: #fff;
+    width: 300px;
+    height: 350px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+.form-container span {
+    font-weight: bold;
+    padding: 0 22px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+}
+
+.form-btn {
+    display: inline-block;
+}
+
+.form-container form {
+    max-width: 300px;
+    padding: 0 20px;
+    /*now overlap the forms*/
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+
+form input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+form .btn:focus {
+    outline: none;
+}
+
+#loginForm {
+    left: -300px;
+}
+
+#registerForm {
+    left: 0px;
+}
+
+
+form a {
+    font-size: 12px;
+}
+
+#indicator {
+    width: 100px;
+    border: none;
+    background: green;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+
+
+/*-------ABOUT-------*/
+.about-1 {
+    margin-top: 40px;
+    flex-basis: 45%;
+}
+
+.about-2 {
+    margin-top: 40px;
+    flex-basis: 45%;
+    min-width: 300px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-2 h2 {
+    color: #b90b8e;
+}
+
+.about-3 {
+    margin-bottom: 40px;
+    flex-basis: 45%;
+}
+
+.about-1 h2 {
+    color: orange;
+}
+
+.about-3 h2 {
+    color: orange;
+}
+
+.pBold1 {
+    font-size: large;
+}
+
+.pBold {
+    font-weight: bold;
+}
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+
+    .about-1,
+    .about-2,
+    .about-3 {
+        flex-basis: 100%;
+        /* Full width for each section */
+        margin-top: 20px;
+        /* Reduce top margin for compact layout */
+        margin-bottom: 20px;
+        /* Reduce bottom margin */
+        text-align: center;
+        /* Ensure text is centered */
+    }
+
+    .about-1,
+    .about-2,
+    .about-3 h2 {
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .about-2 {
+        padding: 0 10px;
+        /* Add some padding for better spacing */
+    }
+}
+
+/* Contact Form */
+
+.col-md-6 h6 {
+    color: #1765be;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+    /* Center the card horizontally */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-groupContact {
+    margin-bottom: 15px;
+}
+
+.form-groupContact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 300px;
+    /* Full width to fit the container */
+    max-width: 300px;
+    /* Max width for larger screens */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin: auto;
+    /* Center the input fields */
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+.btn-primary {
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+    /* Center the button */
+}
+
+.btn-primary:hover {
+    background: darkgreen;
+    /* Improved hover effect */
+}
+
+.border-start {
+    border-left: 2px solid #ddd;
+    padding-left: 60px;
+    height: 400px;
+}
+
+.main-heading {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+    /* Center the heading */
+}
+
+.mb-1 {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    /* Center the subheading */
+}
+
+.underline {
+    height: 4px;
+    width: 4rem;
+    background-color: green;
+    margin: 5px auto 10px auto;
+    /* Center the underline */
+}
+
+.mobileNo {
+    font-size: large;
+    color: maroon;
+    font-weight: bold;
+}
+
+/* Responsive Design for Small Screens */
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 350px;
+        /* Set a max-width for the card */
+        margin: auto;
+        /* Center the card */
+        padding: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+        /* Full width for the form controls */
+    }
+
+    .border-start {
+        border: none;
+        /* Remove border on small screens */
+        padding-left: 0;
+        /* Remove left padding */
+        height: auto;
+        /* Auto height */
+    }
+
+    .main-heading {
+        font-size: 16px;
+        /* Slightly smaller font size */
+    }
+
+    .btn-primary {
+        width: 100%;
+        /* Full width button */
+        padding: 10px;
+        /* Adjust padding */
+    }
+}
+
+/*----blog styling----*/
+
+.blog h1 {
+    color: green;
+    font-size: 50px;
+    margin-bottom: 250px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+
+/*-----community styling----*/
+.community h1 {
+    color: #333;
+}
+
+.community {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.community h2 {
+    color: green;
+    text-align: center;
+}
+
+.community h3 {
+    color: green;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.community p {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.community-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.community-col-1,
+.community-col-2 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.community-col-1 {
+    margin-right: 80px;
+}
+
+.community-col-2 img {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="submit"] {
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #e2edf7;
+}
+
+.CartEmailBtn {
+    display: inline-block;
+    background: #09a724;
+    color: #fff;
+    padding: 8px 30px;
+    margin-left: 980px;
+    border-radius: 30px;
+    transition: 0.5s;
+    border: none;
+}
+
+.CartEmailBtn:hover {
+    background-color: orange;
+}
+
+.CartPrintBtn {
+    display: inline-block;
+    background: #777;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+    border: none;
+}
+
+.CartPrintBtn:hover {
+    background-color: orange;
+}
+
+/* print the cart table below */
+
+@media print {
+    body .navbar * {
+        visibility: hidden;
+    }
+
+    .CartPrintBtn,
+    .CartEmailBtn {
+        display: none;
+    }
+
+    #cartTable {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #cartTable th,
+    #cartTable td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+    }
+}
+
+h4:hover {
+    color: green;
+}
+
+
+
+/*flatshoes Style*/
+
+.flatshoes {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleIP {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: green;
+    text-align: center;
+
+}
+
+.circle-progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar {
+    fill: none;
+    stroke: green;
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg {
+    stroke-width: 10;
+}
+
+.circle-progress-text {
+    font-size: 1.5em;
+}
+
+.descriptionT {
+    text-align: center;
+}
+
+.descriptionT p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container {
+        margin-top: 0;
+    }
+
+    .circle-progress {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleIP {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis {
+        padding: 10px;
+    }
+}
+
+/*flatshoesBacklit Style*/
+
+.flatshoesBacklit {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleIPB {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: green;
+    text-align: center;
+
+}
+
+.circle-progress-container8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress8 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg8 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar8 {
+    fill: none;
+    stroke: green;
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT8-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg8 {
+    stroke-width: 10;
+}
+
+.circle-progress-text8 {
+    font-size: 1.5em;
+}
+
+.descriptionT8 {
+    text-align: center;
+}
+
+.descriptionT8 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container8 {
+        margin-top: 0;
+    }
+
+    .circle-progress8 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text8 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleIPB {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT8 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis8 {
+        padding: 10px;
+    }
+}
+
+
+/*-----Heels Style*/
+
+.Heels {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleSM {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: orange;
+    text-align: center;
+}
+
+.circle-progress-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress2 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg2 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar2 {
+    fill: none;
+    stroke: orange;
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT2-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg2 {
+    stroke-width: 10;
+}
+
+.circle-progress-text2 {
+    font-size: 1.5em;
+}
+
+.descriptionT2 {
+    text-align: center;
+}
+
+.descriptionT2 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container2 {
+        margin-top: 0;
+    }
+
+    .circle-progress2 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text2 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleSM {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT2 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis2 {
+        padding: 10px;
+    }
+}
+
+
+
+/*-----Boots Style*/
+
+.Boots {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleHU {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: purple;
+    text-align: center;
+}
+
+.circle-progress-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress3 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg3 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar3 {
+    fill: none;
+    stroke: purple;
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT3-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg3 {
+    stroke-width: 10;
+}
+
+.circle-progress-text3 {
+    font-size: 1.5em;
+}
+
+.descriptionT3 {
+    text-align: center;
+}
+
+.descriptionT3 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container3 {
+        margin-top: 0;
+    }
+
+    .circle-progress3 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text3 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleHU {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT3 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis3 {
+        padding: 10px;
+    }
+}
+
+
+
+/*-----Menshoes Style*/
+
+.Menshoes {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleO {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: rgb(13, 135, 139);
+    text-align: center;
+}
+
+.circle-progress-container4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress4 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg4 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar4 {
+    fill: none;
+    stroke: rgb(13, 135, 139);
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT4-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg4 {
+    stroke-width: 10;
+}
+
+.circle-progress-text4 {
+    font-size: 1.5em;
+}
+
+.descriptionT4 {
+    text-align: center;
+}
+
+.descriptionT4 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container4 {
+        margin-top: 0;
+    }
+
+    .circle-progress4 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text4 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleO {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT4 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis4 {
+        padding: 10px;
+    }
+}
+
+/*-----Kids Style*/
+
+.Kids {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleR {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: rgb(47, 49, 153);
+    text-align: center;
+}
+
+.circle-progress-container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress5 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg5 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar5 {
+    fill: none;
+    stroke: rgb(47, 49, 153);
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT5-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg5 {
+    stroke-width: 10;
+}
+
+.circle-progress-text5 {
+    font-size: 1.5em;
+}
+
+.descriptionT5 {
+    text-align: center;
+}
+
+.descriptionT5 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container5 {
+        margin-top: 0;
+    }
+
+    .circle-progress5 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text5 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleR {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT5 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis5 {
+        padding: 10px;
+    }
+}
+
+
+
+/*-----ONEPLUS Style*/
+
+.onePlus {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleOP {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: rgb(39, 15, 24);
+    text-align: center;
+}
+
+.circle-progress-container6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress6 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg6 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar6 {
+    fill: none;
+    stroke: rgb(39, 15, 24);
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT6-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg6 {
+    stroke-width: 10;
+}
+
+.circle-progress-text6 {
+    font-size: 1.5em;
+}
+
+.descriptionT6 {
+    text-align: center;
+}
+
+.descriptionT6 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container6 {
+        margin-top: 0;
+    }
+
+    .circle-progress6 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text6 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleOP {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT6 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis6 {
+        padding: 10px;
+    }
+}
+
+
+/*-----LAPTOPS Style*/
+
+.ClowseShoe {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.titleLP {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: rgb(201, 73, 13);
+    text-align: center;
+}
+
+.circle-progress-container7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Stat Analysis Section */
+.statAnalysis7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circle-progress7 {
+    width: 100px;
+    /* Default size, adjust as needed */
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle-bg7 {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+.circle-progress-bar7 {
+    fill: none;
+    stroke: rgb(201, 73, 13);
+    stroke-width: 10;
+    stroke-dasharray: 282.6;
+    /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    /* Starts as 100% (hidden) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+circle {
+    transition: stroke-dashoffset 0.5s;
+}
+
+text {
+    font-size: 20px;
+    fill: #333;
+    font-weight: bold;
+}
+
+#descriptionT7-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.circle-progress-bg7 {
+    stroke-width: 10;
+}
+
+.circle-progress-text7 {
+    font-size: 1.5em;
+}
+
+.descriptionT7 {
+    text-align: center;
+}
+
+.descriptionT7 p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens for products circular bars */
+@media (max-width: 600px) {
+    .circle-progress-container7 {
+        margin-top: 0;
+    }
+
+    .circle-progress7 {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+    }
+
+    .circle-progress-text7 {
+        font-size: 1.2em;
+        /* Adjust font size */
+    }
+
+    .titleLP {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .descriptionT7 p {
+        font-size: 0.9em;
+        /* Adjust font size for better readability */
+        margin: 10px 0;
+        /* Adjust margins for spacing */
+    }
+
+    /* Ensure the section itself is responsive */
+    .statAnalysis7 {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*----------------------SERVICES------------*/
+/* Basic styling for the services section */
+.services-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Space between columns */
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(50% - 20px);
+    /* Two columns with equal width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.services-section h2 {
+    color: #1765be;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    /* Slight lift on hover */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 100%;
+        /* Full width on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+/* ---pages screen size check----*/
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    /* Shortened transition duration */
+}
+
+
+@media only screen and (max-width: 600px) {
+    #homepage {
+        display:block;
+    }
+
+    #servicespage {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    #homepage {
+        display: block;
+    }
+
+    #servicespage {
+        display: none;
+    }
+}
+
+
+
+
+/*SEARCH-----------------------*/
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+.search-dropdown {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    top: 30px;
+    /* Adjust based on your design */
+    right: 0;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.search-container.active .search-dropdown {
+    display: block;
+    /* Show dropdown when active */
+}
+
+
+/* Testimonials Container */
+.testmonial {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.testmonial .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testmonial .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* Ensure testimonials are in one row on larger screens */
+}
+
+.testmonial .col-3 {
+    flex: 0 0 30%;
+    /* Each testimonial takes up 30% of the row on larger screens */
+    margin: 0 10px;
+    /* Add spacing between testimonials */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    /* Add margin-bottom for spacing in smaller screens */
+}
+
+/* Star Rating */
+.testmonial .rating i {
+    color: #ffcc00;
+    margin: 0 2px;
+}
+
+/* Client Image */
+.testmonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+/* Media Query for Slim or Small Screens */
+@media (max-width: 600px) {
+    .testmonial .row {
+        flex-wrap: wrap;
+        /* Allow wrapping to create rows */
+        justify-content: center;
+        /* Center testimonials in each row */
+    }
+
+    .testmonial .col-3 {
+        flex: 0 0 100%;
+        /* Each testimonial takes up 100% of the row on small screens */
+        max-width: 300px;
+        /* Optional: Limit the width for readability */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---media querry for menu for less than 600px screens---*/
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+
+    .col-2,
+    .col-3,
+    .col-4 {
+        flex-basis: 100%;
+    }
+
+    .product-details .row {
+        text-align: left;
+    }
+
+    .product-details .col-2 {
+        padding: 20px 0;
+    }
+
+    .product-details h1 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .cart-info p {
+        display: none;
+    }
+}
+
+
+/*---media querry for menu---*/
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Responsive design for footer columns */
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .app-logo img {
+        width: 100px;
+        margin: 0 5px;
+    }
+}

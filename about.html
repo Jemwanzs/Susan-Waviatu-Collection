@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <!-- Preload important script -->
+    <link rel="preload" href="important-script.js" as="script">
+    <link rel="prefetch" href="next-page.html">
+
+    <link rel="stylesheet" href="style.css"> <!-- connect to the styling css-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png"><!----fav-icon for the browser---->
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="150px" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <!--<a href="cart.html"><img src="images/shopping-bag1.png" width="30px" height="30px" alt="Cart"></a>-->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
+        </div>
+
+    </div>
+
+    <!-- About Us -->
+    <div class="aboutUs">
+        <div class="container">
+            <div class="about-1">
+                <h2>About Us</h2>
+                <p>
+                    At Susan Waviatu Shoe Collection, we are dedicated to offering top-quality footwear and exceptional service,
+                    ensuring our customers enjoy the highest level of satisfaction. <br /><br />Our journey began with 
+                    a passion for fashion and a commitment to providing stylish, comfortable, and durable shoes for every occasion.
+                </p>
+            </div>
+            <br />
+            <hr>
+            <div class="row">
+                <div class="about-2">
+                    <h2>Our Products</h2>
+                    <p>
+                        We offer an extensive collection of high-quality footwear, featuring the latest trends and designs from leading brands.
+                    </p>
+                    <a href="products.html" class="btn">Explore &#8594;</a>
+                </div>
+                <div class="about-2">
+                    <h2>Our Services</h2>
+                    <p>
+                        Beyond our footwear collection, we also offer expert shoe care and maintenance services to keep your shoes in top condition. 
+                        Additionally, we run a special shoe trade-in program, where we collect gently worn shoes and donate them to orphans and 
+                        those in need. In exchange, customers receive fair-priced shoes, making it easier to refresh their wardrobe while giving 
+                        back to the community.
+                    </p>
+                    <a href="services.html" class="btn">Explore &#8594;</a>
+                </div>
+            </div>
+            <br />
+            <hr>
+            <div class="about-3">
+                <h2>Why Choose Us?</h2>
+                <p class="pBold1">At Susan Waviatu Collection, we prioritize:</p>
+                <p class="pBold">Transparency:</p>
+                <p>We provide clear, honest information and practices in all our dealings.</p>
+                <p class="pBold">Customer Satisfaction:</p>
+                <p>We prioritize your satisfaction above all else.</p>
+                <p class="pBold">Quality and Service:</p>
+                <p>We ensure top-notch care, whether you’re buying a new or used shoes.</p>
+                <p class="pBold">Digital Partnership:</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="images/logo3.png" alt="Footer Logo">
+                    <p>Trust us for quality, reliability, and top brands
+                        like Nike, Brogues, Clowse, Taiyu, name them...<br /><br />Take advantage of our
+                        shoes trade-in program to upgrade your shoe-game effortlessly and affordably—Susam Muli Mwende, Founder</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="">mwendesusa@gmail.com</a></li>
+                        <li><a href="">+254724-541-470</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Download Our App</h3>
+                    <p>Android & iOS users</p>
+                    <div class="app-logo">
+                        <li><a href="https://play.google.com/store/apps?hl=en_US&pli=1"><img src="images/playstore.png"
+                                    alt="Play Store"></a>
+                        <li><a href="https://appstore.com"><img src="images/appstore.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2024 JMS | Susan Waviatu Collection. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "1000px";
+            } else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!--code copy protection <right click and other chortcuts dissabled-->
+    <script>
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'i' || e.key === 'c')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
